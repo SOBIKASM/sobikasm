@@ -6,6 +6,7 @@ import Projects from "./pages/Projects"
 import Resume from "./pages/Resume"
 import Skills from "./pages/Skills"
 import Contact from "./pages/Contact"
+import Education from "./pages/Education"
 
 
 export default function App() {
@@ -15,6 +16,7 @@ export default function App() {
     <Header/>
     <Hero/>
     <About/>
+    <Education/>
     <Skills/>
     <Projects/>
     <Resume/>

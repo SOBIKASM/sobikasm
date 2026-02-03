@@ -6,11 +6,11 @@ const Resume = () => {
   const [loading, setLoading] = useState(false);
 
   const downloadResume = async () => {
-    setLoading(true); // start loading
+    setLoading(true);
     try {
       const response = await fetch("/SOBIKASM-resume.pdf");
       if (!response.ok) throw new Error("Network response was not ok");
-      
+
       const blob = await response.blob();
       const url = window.URL.createObjectURL(blob);
 
@@ -22,23 +22,28 @@ const Resume = () => {
       a.remove();
       window.URL.revokeObjectURL(url);
 
-      alert("Download successful!");
     } catch (error) {
       console.error(error);
       alert("Download failed!");
     } finally {
-      setLoading(false); // stop loading
+      setLoading(false);
     }
-  }
+  };
 
   return (
-    <div className='resume-section' id='resume'>
-      <h2>RESUME</h2>
+    <section className="resume-section" id="resume">
+      <h2>Resume</h2>
+      <p className="resume-text">
+        A concise overview of my education, technical skills, and projects in
+        web development and AI-based applications.
+      </p>
+
       <button onClick={downloadResume} disabled={loading} className="btn">
-        {loading ? "Downloading..." : "DOWNLOAD"} <FiDownload size={20} style={{ marginLeft: "8px" }} />
+        {loading ? "Downloading..." : "Download Resume"}
+        <FiDownload size={20} style={{ marginLeft: "8px" }} />
       </button>
-    </div>
-  )
-}
+    </section>
+  );
+};
 
 export default Resume;

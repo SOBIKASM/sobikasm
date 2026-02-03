@@ -20,26 +20,35 @@ const Header = () => {
   }
 
   // ScrollSpy effect
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = ["#home", "#about", "#skills", "#projects", "#resume", "#contact"]
-      const scrollPosition = window.scrollY + window.innerHeight / 2
+useEffect(() => {
+  const sections = [
+    "#home",
+    "#about",
+    "#education",
+    "#skills",
+    "#projects",
+    "#resume",
+    "#contact"
+  ]
 
-      for (let i = 0; i < sections.length; i++) {
-        const section = document.querySelector(sections[i])
-        if (section) {
-          const offsetTop = section.offsetTop
-          const offsetHeight = section.offsetHeight
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            setActiveLink(sections[i])
-          }
-        }
+  const handleScroll = () => {
+    const scrollY = window.scrollY + 120 // header offset
+
+    for (let i = sections.length - 1; i >= 0; i--) {
+      const section = document.querySelector(sections[i])
+      if (section && scrollY >= section.offsetTop) {
+        setActiveLink(sections[i])
+        break
       }
     }
+  }
 
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+  window.addEventListener("scroll", handleScroll)
+  handleScroll() // run once on mount
+
+  return () => window.removeEventListener("scroll", handleScroll)
+}, [])
+
 
   const getClassName = (href) => (activeLink === href ? "nav-item active" : "nav-item")
 
@@ -52,6 +61,7 @@ const Header = () => {
       <nav className="window-nav">
         <a href="#home" className={getClassName("#home")}>Home</a>
         <a href="#about" className={getClassName("#about")}>About</a>
+        <a href="#education" className={getClassName("#education")}>Education</a>
         <a href="#skills" className={getClassName("#skills")}>Skills</a>
         <a href="#projects" className={getClassName("#projects")}>Projects</a>
         <a href="#resume" className={getClassName("#resume")}>Resume</a>
@@ -67,6 +77,7 @@ const Header = () => {
           <nav className={`mobile-menu ${isOpen ? "open" : ""}`}>
             <a href="#home" className={getClassName("#home")} onClick={() => setIsOpen(false)}>Home</a>
             <a href="#about" className={getClassName("#about")} onClick={() => setIsOpen(false)}>About</a>
+            <a href="#education" className={getClassName("#education")} onClick={() => setIsOpen(false)}>Education</a>
             <a href="#skills" className={getClassName("#skills")} onClick={() => setIsOpen(false)}>Skills</a>
             <a href="#projects" className={getClassName("#projects")} onClick={() => setIsOpen(false)}>Projects</a>
             <a href="#resume" className={getClassName("#resume")} onClick={() => setIsOpen(false)}>Resume</a>
