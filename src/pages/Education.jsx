@@ -13,7 +13,7 @@ const Education = () => {
           </p>
           <p className="edu-duration">2023 – 2027</p>
           <p className="edu-score">
-            CGPA: <strong>7.97</strong> (till 6th semester)
+            CGPA: <strong>7.97</strong> (till 5th semester)
           </p>
         </div>
 

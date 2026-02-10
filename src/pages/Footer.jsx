@@ -4,7 +4,7 @@ import './style.css';
 const Footer = () => {
   return (
     <footer className="footer">
-      <h3>Contact Me</h3>
+      <h2>Contact Me</h2>
       <div className="footer-links">
         <a href="mailto:sobikasm@gmail.com" target="_blank" rel="noopener noreferrer">
           <FaEnvelope /> sobikasm@gmail.com

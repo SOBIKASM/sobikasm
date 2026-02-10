@@ -3,6 +3,8 @@ h2{
   font-size: 2rem !important;
   padding: 10px 12px;
   margin: 0;
+  font-family: "Kumar One","serif";
+  
 }
 .hero-container {
   margin: 150px auto;
@@ -17,7 +19,7 @@ h2{
 }
 
 .hero-container h2 {
-  font-family: fantasy;
+font-family: 'Hurricane','Love Light', 'DynaPuff','Condiment','Festive', cursive;
 
 }
 
@@ -195,6 +197,7 @@ background-color:#D5C4E4;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
+  font-family: 'DynaPuff','serif';
   gap: 10px;
   justify-content: center;
 }
@@ -343,6 +346,7 @@ background-color:#D5C4E4;
   width:250px;
   height:60px;
   border-radius:10px ;
+  font-family: 'DynaPuff','serif';
   border:none;
   color:white;
   font-size: larger;
@@ -422,6 +426,7 @@ background-color:#D5C4E4;
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s;
+  font-family: 'DynaPuff','serif';
 }
 
 .contact-form button:hover {
@@ -438,7 +443,9 @@ background-color:#D5C4E4;
 
 .footer h3 {
   margin-bottom: 20px;
-  font-size: 1.8rem;
+ 
+
+  font-family: 'DynaPuff','serif';
 }
 
 .footer-links {

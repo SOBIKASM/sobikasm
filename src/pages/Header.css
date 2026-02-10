@@ -1,6 +1,11 @@
 
 /* === HEADER === */
-
+a{
+  font-family: 'DynaPuff','serif';
+}
+.header-container div{
+   font-family: 'DynaPuff','serif';
+}
 .header-container {
   display: flex;
   justify-content: space-between;
