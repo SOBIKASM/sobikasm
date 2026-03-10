@@ -27,7 +27,16 @@ const Projects = () => {
         "Built multiple computer vision–based applications such as finger counting, system volume control, and a virtual mouse. These projects demonstrate real-time hand tracking and gesture-based human–computer interaction.",
       github: "https://github.com/SOBIKASM/Hand-Gesture-Projects",
       img: "https://tse2.mm.bing.net/th/id/OIP.UDLULN5ar9ZqNSctwOH5DAHaEK?pid=Api&P=0&h=180"
-    }
+    },
+    {
+      title: "Breathing Visualizer",
+      tech: "React.js ",
+      description:
+        "A visually appealing breathing exercise visualizer built with React.js, providing a calming and interactive way to practice mindfulness and stress relief.",
+      github: "https://github.com/SOBIKASM/relaxed",
+      visit: "https://relaxed-ten.vercel.app/",
+      img: "./relaxed.png"
+    },
   ];
 
 

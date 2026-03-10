@@ -2,10 +2,10 @@ import "./style.css";
 
 const Skills = () => {
   const skills = {
-    "Programming Languages": ["C", "Python", "SQL"],
+    "Programming Languages": ["C","Java", "Python", "SQL"],
     "Web Development": [ "React.js","MongoDB", "Express.js", "Node.js"],
     "Machine Learning": ["OpenCV", "Mediapipe"],
-    "Tools": ["VS Code", "GitHub", "Postman", "Figma"]
+    "Tools": [ "GitHub", "Postman", "Figma"]
   };
 
   return (

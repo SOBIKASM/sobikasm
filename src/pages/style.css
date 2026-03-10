@@ -1,9 +1,9 @@
 /* ==== HERO ==== */
 h2{
-  font-size: 2rem !important;
+  font-size: 2.5rem !important;
   padding: 10px 12px;
-  margin: 0;
-  font-family: "Kumar One","serif";
+  margin: 10px 10px;
+  font-family: "Kaushan Script","serif";
   
 }
 .hero-container {
@@ -24,63 +24,79 @@ font-family: 'Hurricane','Love Light', 'DynaPuff','Condiment','Festive', cursive
 }
 
 /* ==== ABOUT ===== */
-
 .about-container {
-  padding: 24px 16px;
+  padding: 64px 32px;
   width: 100%;
-  background-color:#D5C4E4;
-  backdrop-filter: blur(10px);
+  background: #e4d5f0; /* fallback */
+  background: linear-gradient(120deg, #dac5ec, #ebdef5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   text-align: center;
-  color: black;
+  color: #1e102b;
 }
 
 .about-section {
   display: flex;
-  gap: 10px;
+  gap: 40px;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .about-section img {
   max-width: 300px;
   width: 100%;
   height: auto;
-  border-radius: 12px;
+  border-radius: 32% 68% 70% 30% / 31% 47% 53% 69%;
+  box-shadow: 20px 20px 0 rgba(70, 36, 99, 0.2);
+  border: 4px solid white;
+  transition: transform 0.4s ease;
+}
 
+.about-section img:hover {
+  transform: scale(1.02) rotate(1deg);
 }
 
 .about-text {
   flex: 1;
-  min-width: 250px;
+  min-width: 280px;
   text-align: left;
-  font-size: large;
+  font-size: 1.2rem;
+  background: rgba(255,255,255,0.4);
+  padding: 24px 32px;
+  border-radius: 60px 16px 60px 16px;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.8);
 }
 
-@media(max-width:768px) {
+.about-text p {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
   .about-section {
     flex-direction: column;
     text-align: center;
+    gap: 24px;
   }
-
   .about-text {
     text-align: center;
   }
 }
+
 /* ==== EDUCATION ==== */
 
 .education-section {
   padding: 48px 32px;
- 
-  color: black;
+  color: rgb(0, 0, 0);
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(10px);
 }
 
 .education-section h2 {
   margin-bottom: 32px;
+  color: white;
 }
 
 /* GRID LAYOUT */
@@ -95,8 +111,7 @@ font-family: 'Hurricane','Love Light', 'DynaPuff','Condiment','Festive', cursive
 /* CARD */
 .education-card {
   padding: 24px;
-  background-color: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255);
   border-radius: 14px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   text-align: left;
@@ -110,20 +125,22 @@ font-family: 'Hurricane','Love Light', 'DynaPuff','Condiment','Festive', cursive
 
 .education-card h3 {
   color: #462463;
+  font-size: larger;
   margin-bottom: 8px;
 }
 
 .edu-institute {
-  font-weight: 500;
+  font-size: larger;
 }
 
 .edu-duration {
-  font-size: 0.95rem;
+  font-size: 1.5rem;
   color: #555;
   margin: 4px 0;
 }
 
 .edu-score {
+  font-size: larger;
   margin-top: 6px;
 }
 
@@ -222,113 +239,107 @@ background-color:#D5C4E4;
 .project-section {
   width: 100%;
   text-align: center;
-  padding: 60px 20px;
-  background-color: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(10px);
+  padding: 80px 20px;
+  background-color: transparent; 
 }
 
 .project-title {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   font-weight: 700;
-  margin-bottom: 40px;
-  color: black;
+  margin-bottom: 50px;
+  color: #ffffff; 
+  text-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
-
-/* GRID LAYOUT */
 .project-container {
   max-width: 1200px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
   padding: 0 16px;
+  justify-content: center; 
 }
 
-/* CARD */
 .card-container {
-  background-color: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(10px);
-  border-radius: 14px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  padding-bottom: 16px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  padding-bottom: 20px;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   text-align: left;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 500px; 
+  min-height: 450px; 
 }
 
 .card-container:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.15);
+  transform: translateY(-12px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
 }
-
-/* IMAGE */
 .project-thumbnail {
   width: 100%;
-  height: 220px;   /* increased */
+  height: 300px; 
   object-fit: cover;
-  border-radius: 14px 14px 0 0;
 }
-
 /* CONTENT */
 .card-container h4 {
-  margin: 14px 16px 6px;
-  font-size: 1.2rem;
+  margin: 20px 20px 5px;
+  font-size: 1.4rem;
   color: #462463;
-  
-}
-.card-container {
-  display: flex;
-  flex-direction: column;
+  font-family: 'DynaPuff', sans-serif;
 }
 
 .card-tech {
-  margin: 0 16px 10px;
-  font-size: 0.9rem;
-  color: #6c757d;
+  margin: 0 20px 15px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #7e5aa6;
+  font-weight: 600;
 }
 
 .card-container p {
-  margin: 8px 16px;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #462463;
+  margin: 0 20px 20px;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  color: #444;
+ flex-grow: 1; 
 }
 
 .project-buttons {
   display: flex;
-  gap: 12px;
-  margin: 16px;
+  gap: 24px;
+  margin:  10px 100px;
 }
-
 .github-link,
 .visit-link {
   flex: 1;
+  width: 120px;
+  margin: auto 0 0 0;
   text-align: center;
-  padding: 8px 2px;
-
-  border-radius: 6px;
-  font-size: 1.2rem;
+  padding: 12px 5px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
   color: white;
   text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.github-link,.visit-link  {
   background-color: #462463;
+  transition: all 0.2s ease;
 }
 
 .visit-link:hover,
-.github-link:hover  {
+.github-link:hover {
   background-color: #7e5aa6;
+  transform: scale(1.05);
 }
 
 /* MOBILE */
-@media (max-width: 480px) {
-  .project-title {
-    font-size: 1.8rem;
-  }
-
-  .card-container p {
-    font-size: 0.9rem;
+@media (max-width: 768px) {
+  .card-container {
+    flex: 1 1 100%; /* Full width on mobile */
+    max-width: 400px;
   }
 }
 
