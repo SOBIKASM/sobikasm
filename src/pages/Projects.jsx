@@ -13,6 +13,24 @@ const Projects = () => {
       img: "./Country page.png"
     },
     {
+      title: "Breathing Visualizer",
+      tech: "React.js ",
+      description:
+        "A visually appealing breathing exercise visualizer built with React.js, providing a calming and interactive way to practice mindfulness and stress relief.",
+      github: "https://github.com/SOBIKASM/relaxed",
+      visit: "https://relaxed-ten.vercel.app/",
+      img: "./relaxed.png"
+    },
+    {
+      title: "Learnagram",
+      tech: "React.js , Node.js, Express.js, MongoDB",
+      description:
+        "A academic virtual interaction learning platform built with React.js, providing an engaging way to explore educational content for institution.",
+      github: "https://github.com/SOBIKASM/Learnagram",
+      visit: "https://learnagram-one.vercel.app/",
+      img: "./learnagram.png"
+    },
+    {
       title: "Sign Language Recognition",
       tech: "Python · OpenCV · MediaPipe · TensorFlow",
       description:
@@ -28,15 +46,7 @@ const Projects = () => {
       github: "https://github.com/SOBIKASM/Hand-Gesture-Projects",
       img: "https://tse2.mm.bing.net/th/id/OIP.UDLULN5ar9ZqNSctwOH5DAHaEK?pid=Api&P=0&h=180"
     },
-    {
-      title: "Breathing Visualizer",
-      tech: "React.js ",
-      description:
-        "A visually appealing breathing exercise visualizer built with React.js, providing a calming and interactive way to practice mindfulness and stress relief.",
-      github: "https://github.com/SOBIKASM/relaxed",
-      visit: "https://relaxed-ten.vercel.app/",
-      img: "./relaxed.png"
-    },
+    
   ];
 
 
